@@ -1,10 +1,11 @@
 backend:
   name: github
   repo: oscarruz/blog03
-local_backend: true
 branch: main
 media_folder: "blog/.vuepress/public/media"
 public_folder: "/media"
+site_url: https://blog03-oruz.netlify.app/
+display_url: https://blog03-oruz.netlify.app/
 publish_mode: editorial_workflow
 collections:
   - label: "Home"

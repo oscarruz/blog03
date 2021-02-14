@@ -7,7 +7,7 @@
     "name": "",
     "email": ""
   },
-  "repository": "blog03/blog03",
+  "repository": "oscarruz/blog03",
   "scripts": {
     "dev": "vuepress dev blog",
     "build": "vuepress build blog"
