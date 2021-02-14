@@ -8,18 +8,9 @@ site_url: https://blog03-oruz.netlify.app/
 display_url: https://blog03-oruz.netlify.app/
 publish_mode: editorial_workflow
 collections:
-  - label: "Home"
-    name: "home"
-    files:
-      - label: "Homepage"
-        name: "homepage"
-        file: "index.md"
-        delete: false
-        fields:
-          - {label: Body, name: body, widget: markdown}
   - label: "Posts"
     name: "posts"
-    folder: "blog/_posts"
+    folder: "/blog/_posts"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
