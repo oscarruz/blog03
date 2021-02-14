@@ -1,10 +1,15 @@
 ---
+author: ULIVZ
 date: 2018-11-7
-tag: 
+location: Hangzhou
+title: Prueba
+tag:
   - frontmatter
   - vuepress
-author: ULIVZ
-location: Hangzhou  
+description: Esto es una prueba
+image: /media/avatar.jpg
+categories:
+  - Test
 ---
 
 # Front Matter in VuePress
