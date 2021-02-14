@@ -1,14 +1,18 @@
 ---
+author: ULIVZ
 date: 2019-5-6
-tag: 
+location: Shanghai
+title: Título 1
+tag:
   - theme
   - blog
   - vuepress
-author: ULIVZ
-location: Shanghai  
+description: prueba prueba
+image: /media/avatar.jpg
+categories:
+  - test
 ---
-
-# Writing a VuePress theme
+# TEST Writing a VuePress theme
 
 To write a theme, create a `.vuepress/theme` directory in your docs root, and then create a `Layout.vue` file:
 
@@ -25,7 +29,7 @@ From there it's the same as developing a normal Vue application. It is entirely 
 
 The compiled content of the current `.md` file being rendered will be available as a special `<Content/>` global component. You will need to render it somewhere in your layout in order to display the content of the page. The simplest theme can be just a single `Layout.vue` component with the following content:
 
-``` html
+```html
 <template>
   <div class="theme-container">
     <Content/>
@@ -35,7 +39,7 @@ The compiled content of the current `.md` file being rendered will be available 
 
 **Also see:**
 
-- [Markdown Slot](../guide/markdown-slot.md)
+* [Markdown Slot](../guide/markdown-slot.md)
 
 ## Directory Structure
 
@@ -50,7 +54,7 @@ theme
 ├── `components`
 │   └── xxx.vue
 ├── `layouts`
-│   ├── Layout.vue _(**Mandatory**)_
+│   ├── Layout.vue *(**Mandatory**)*
 │   └── 404.vue
 ├── `styles`
 │   ├── index.styl
@@ -63,16 +67,17 @@ theme
 └── package.json
 :::
 
-- `theme/global-components`: Components under this directory will be automatically registered as global components. For details, please refer to [@vuepress/plugin-register-components](https://github.com/vuejs/vuepress/tree/master/packages/@vuepress/plugin-register-components).
-- `theme/components`: Your components.
-- `theme/layouts`: Layout components of the theme, where `Layout.vue` is required.
-- `theme/styles`: Global style and palette.
-- `theme/templates`: Modify default template.
-- `theme/index.js`: Entry file of theme configuration.
-- `theme/enhanceApp.js`: Theme level enhancements.
+* `theme/global-components`: Components under this directory will be automatically registered as global components. For details, please refer to [@vuepress/plugin-register-components](https://github.com/vuejs/vuepress/tree/master/packages/@vuepress/plugin-register-components).
+* `theme/components`: Your components.
+* `theme/layouts`: Layout components of the theme, where `Layout.vue` is required.
+* `theme/styles`: Global style and palette.
+* `theme/templates`: Modify default template.
+* `theme/index.js`: Entry file of theme configuration.
+* `theme/enhanceApp.js`: Theme level enhancements.
 
 ::: warning Note
 When you publish your theme as an NPM package, if you don't have any theme configuration, that means you don't have `theme/index.js`, you'll need to set the `"main"` field  to `layouts/Layout.vue` in `package.json`, only in this way VuePress can correctly resolve the theme.
+
 ```json
 {
   ...
@@ -103,7 +108,7 @@ If you want to switch the layout of some pages to `AnotherLayout.vue`, you just 
 ---
 layout: AnotherLayout
 ---
-````
+```
 
 ::: tip
 Each layout component may render distinct pages. If you want to apply some global UI (e.g. global header), consider using [globalLayout](./option-api.md#globallayout)。
@@ -130,7 +135,7 @@ The `Layout` component will be invoked once for every `.md` file in `docs`, and 
 
 This is the value of `$site` of this very website:
 
-``` json
+```json
 {
   "title": "VuePress",
   "description": "Vue-powered Static Site Generator",
@@ -151,7 +156,7 @@ This is the value of `$site` of this very website:
 
 This is the `$page` object for this page you are looking at:
 
-``` json
+```json
 {
   "lastUpdated": 1524847549000,
   "path": "/guide/custom-themes.html",
@@ -177,7 +182,7 @@ If a markdown file contains a `<!-- more -->` comment, any content above the com
 
 Themes can enhance the Vue app that VuePress uses by exposing an `enhanceApp.js` file at the root of the theme. The file should `export default` a hook function which will receive an object containing some app-level values. You can use this hook to install additional Vue plugins, register global components, or add additional router hooks:
 
-``` js
+```js
 export default ({
   Vue, // the version of Vue being used in the VuePress app
   options, // the options for the root Vue instance
