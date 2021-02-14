@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: oscarruz/blog03
-branch: main
+  branch: main
 media_folder: "blog/.vuepress/public/media"
 public_folder: "/media"
 site_url: https://blog03-oruz.netlify.app/
