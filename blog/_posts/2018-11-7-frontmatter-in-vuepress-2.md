@@ -11,8 +11,7 @@ image: /media/avatar.jpg
 categories:
   - Test
 ---
-
-# Front Matter in VuePress
+# TEST Front Matter in VuePress
 
 Any markdown file that contains a YAML front matter block will be processed by [gray-matter](https://github.com/jonschlinkert/gray-matter). The front matter must be the first thing in the markdown file and must take the form of valid YAML set between triple-dashed lines. Here is a basic example:
 
@@ -53,59 +52,58 @@ lang = "en-US"
 ---
 ```
 
-
 ## Predefined Variables
 
 ### title
 
-- Type: `string`
-- Default: `h1_title || siteConfig.title`
+* Type: `string`
+* Default: `h1_title || siteConfig.title`
 
 Title of current page.
 
 ### lang
 
-- Type: `string`
-- Default: `en-US`
+* Type: `string`
+* Default: `en-US`
 
 Language of current page.
 
 ### description
 
-- Type: `string`
-- Default: `siteConfig.description`
+* Type: `string`
+* Default: `siteConfig.description`
 
 Description of current page.
 
 ### layout
 
-- Type: `string`
-- Default: `Layout`
+* Type: `string`
+* Default: `Layout`
 
 Set the layout component of the current page.
 
 ### permalink
 
-- Type: `string`
-- Default: `siteConfig.permalink`
+* Type: `string`
+* Default: `siteConfig.permalink`
 
 Refer to: [Permalinks](./permalinks.md).
 
 ### metaTitle
 
-- Type: `string`
-- Default: <code>\`${page.title} | ${siteConfig.title}\`</code>
+* Type: `string`
+* Default: <code>\`${page.title} | ${siteConfig.title}\`</code>
 
 Override the default meta title.
 
 ### meta
 
-- Type: `array`
-- Default: `undefined`
+* Type: `array`
+* Default: `undefined`
 
 Specify extra meta tags to be injected:
 
-``` yaml
+```yaml
 ---
 meta:
   - name: description
@@ -119,14 +117,14 @@ meta:
 
 ### navbar
 
-- Type: `boolean`
-- Default: `undefined`
+* Type: `boolean`
+* Default: `undefined`
 
 See: [Default Theme Config > Disable the Navbar](../theme/default-theme-config.md#disable-the-navbar).
 
 ### sidebar
 
-- Type: `boolean|'auto'`
-- Default: `undefined`
+* Type: `boolean|'auto'`
+* Default: `undefined`
 
 See: [Default Theme Config > Sidebar](../theme/default-theme-config.md#sidebar).
